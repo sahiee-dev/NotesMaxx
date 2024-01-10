@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self'"/>>
+    <title>NOTE++</title>
+    <link rel="stylesheet" href="notesstyle.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <script src="script.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <button class="toggle-tools"><i class="fas fa-arrow-alt-circle-right"></i></button>
+      <section class="tools-board">
+        <div class="row">
+          <label class="title">Shapes</label>
+          <ul class="options">
+            <li class="option tool" id="rectangle">
+              <i class="fa-regular fa-square"></i>
+              <span>rectangle</span>
+            </li>
+            <li class="option tool" id="circle">
+              <i class="fa-regular fa-circle"></i>
+              <span>
+                circle
+              </span>
+            </li>
+            <li class="option tool" id="triangle">
+                <i class="bi bi-triangle"></i>
+              <span>
+                triangle
+              </span>
+            </li>
+            <li class="option">
+              <input type="checkbox" id="fill-color">
+              <label for="fill-color">Fill color</label>
+            </li>
+          </ul>
+        </div>
+        <div class="row">
+          <label class="title">Options</label>
+          <ul class="options">
+            <li class="option active tool" id="brush">
+              <i class="fa-solid fa-pen"></i>
+              <span>
+                pen
+              </span>
+            </li>
+            <li class="option tool" id="eraser">
+              <i class="fa-solid fa-eraser"></i>
+              <span>
+                eraser
+              </span>
+            </li>
+            <li class="option">
+              <input type="range" id="size-slider" min="1" max="30" value="5">
+            </li>
+          </ul>
+        </div>
+        <div class="row colors">
+          <label class="title">Colors</label>
+          <ul class="options">
+            <li class="option"></li>
+            <li class="option selected"></li>
+            <li class="option"></li>
+            <li class="option"></li>
+            <li class="option">
+              <input type="color" id="color-picker" value="#4A98F7">
+            </li>
+          </ul>
+        </div>
+        
+
+<div class="row buttons">
+  <button class="clear-canvas"><i class="fa-regular fa-circle-xmark"></i></button>
+  <button class="save-img"><i class="fa-solid fa-download"></i></button>
+  <button class="undo-btn">Undo</button>
+  <button class="redo-btn">Redo</button>
+</div>
+
+
+
+      </section>
+      <section class="drawing-board">
+        <div class="canvas-container"> 
+          <canvas id="mycanvas"></canvas>
+        </div>
+        
+      </section>
+    </div>
+    
+  </body>
+</html>
